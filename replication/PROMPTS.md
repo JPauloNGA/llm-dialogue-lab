@@ -1,6 +1,16 @@
 ﻿# Prompts Publicos do Experimento
 
-Estes sao os prompts usados no experimento. O codigo que os orquestra e privado.
+## Adaptacao Metodologica (Hardware)
+
+O experimento original previa Qwen 2.5 7B e Mistral 7B. Devido a
+restricoes de hardware (dois modelos 7B nao cabem simultaneamente
+em memoria), a dupla foi reduzida para:
+
+- Proponente: qwen2.5:3b (Alibaba)
+- Critico: hermes3:3b (NousResearch)
+
+A logica de dialogo entre arquiteturas distintas foi preservada.
+Ambos os modelos cabem juntos em ~4-5 GB de RAM/VRAM.
 
 ## System Prompt - Qwen (Proponente)
 
@@ -8,7 +18,7 @@ Estes sao os prompts usados no experimento. O codigo que os orquestra e privado.
     originais e abordagens nao convencionais. Seja criativo e especifico.
     Nao peca permissao, apenas proponha.
 
-## System Prompt - Mistral (Critico)
+## System Prompt - Hermes (Critico)
 
     Voce e o Critico Construtivo. Sua funcao e analisar a proposta do outro
     modelo, apontar falhas, sugerir melhorias e refinar o metodo.
@@ -19,11 +29,11 @@ Estes sao os prompts usados no experimento. O codigo que os orquestra e privado.
 
 - Turnos por sessao: 5
 - Temperatura Qwen: 0.8
-- Temperatura Mistral: 0.4
+- Temperatura Hermes: 0.4
 - Context window: 8192
-- Seed: fixo (documentado por sessao)
+- keep_alive: -1 (ambos os modelos mantidos em memoria)
 
 ## Criterio de Parada
 
-A conversa termina quando o Mistral emite o token final [CONSENSO]
+A conversa termina quando o Critico emite o token final [CONSENSO]
 ou quando o limite de turnos e atingido.

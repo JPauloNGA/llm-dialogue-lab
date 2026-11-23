@@ -4,33 +4,26 @@
 
 - Ollama instalado (https://ollama.com)
 - Python 3.10+
-- Aproximadamente 12 GB de espaco livre em disco
+- Aproximadamente 6 GB de espaco livre em disco
 
 ## Passo 1: Baixar os modelos
 
-Abra o terminal e execute:
-
-    ollama pull qwen2.5:7b
-    ollama pull mistral:7b
+    ollama pull qwen2.5:3b
+    ollama pull hermes3:3b
 
 ## Passo 2: Verificar que estao funcionando
 
-    ollama run qwen2.5:7b Responda apenas: OK
-    ollama run mistral:7b Responda apenas: OK
+    ollama run qwen2.5:3b Responda apenas: OK
+    ollama run hermes3:3b Responda apenas: OK
 
 ## Passo 3: Implementar o orquestrador
 
-O codigo-fonte do orquestrador NAO e publicado neste repositorio
-por opcao do autor. Porem, os prompts, parametros e a logica completa
-estao descritos em:
+O codigo-fonte do orquestrador NAO e publicado neste repositorio.
+Os prompts e a logica completa estao em PROMPTS.md e SCRIPTS_EXAMPLE.md.
 
-- PROMPTS.md - prompts de sistema e de turno
-- SCRIPTS_EXAMPLE.md - pseudocodigo e estrutura
-
-Qualquer pessoa com conhecimento basico de Python e a biblioteca
-ollama consegue reproduzir o experimento em menos de 30 minutos.
+Dica critica para hardware fraco: use keep_alive=-1 nas chamadas
+ollama.chat() para manter ambos os modelos carregados simultaneamente.
 
 ## Passo 4: Comparar resultados
 
-Apos rodar o experimento, compare suas conversas com as publicadas
-em ../conversations/. As metricas esperadas estao em ../analysis/METRICAS.md.
+Compare suas conversas com as publicadas em ../conversations/.

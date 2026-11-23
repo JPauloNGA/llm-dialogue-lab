@@ -9,8 +9,8 @@ Modelos de linguagem de diferentes arquiteturas (Qwen vs. Mistral) possuem "vies
 ## Stack
 
 - **Runtime local**: Ollama
-- **Modelo A (Proponente)**: Qwen 2.5 7B
-- **Modelo B (Critico)**: Mistral 7B
+- **Modelo A (Proponente)**: Qwen 2.5 3B (Alibaba)
+- **Modelo B (Critico)**: Hermes 3 3B (NousResearch)
 - **Orquestracao**: Script privado (nao publicado neste repo)
 - **Analise**: Python + Matplotlib (outputs publicados em `analysis/`)
 
