@@ -72,6 +72,6 @@ O experimento original previa Qwen 7B e Mistral 7B. Devido a restricoes de hardw
 
 Veja replication/SETUP.md. Os prompts completos estao em replication/PROMPTS.md. O codigo do orquestrador e privado por opcao do autor, mas a logica esta descrita em replication/SCRIPTS_EXAMPLE.md e qualquer pessoa com Python basico e a biblioteca ollama reproduz em menos de 30 minutos.
 
-## Autor
+## Licenca
 
-Joao Paulo - https://github.com/JPauloNGA
+MIT. Veja [LICENSE](LICENSE) para os termos completos.
