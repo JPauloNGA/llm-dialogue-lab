@@ -1,0 +1,33 @@
+﻿# === Codigo-fonte do orquestrador (NAO subir) ===
+src/
+*.pyc
+__pycache__/
+
+# === Ambiente e credenciais ===
+.env
+.venv/
+venv/
+
+# === Logs temporarios (subimos apenas consolidados) ===
+logs/*.tmp
+*.log
+
+# === Sistema operacional ===
+.DS_Store
+Thumbs.db
+
+# === Modelos locais (nunca subir) ===
+models/
+*.gguf
+*.bin
+
+# === Notebooks com cache ===
+.ipynb_checkpoints/
+
+# === Excecoes: queremos subir os resultados ===
+!conversations/*.json
+!conversations/*.md
+!results/*.md
+!analysis/charts/*.png
+!analysis/charts/*.svg
+!analysis/*.md

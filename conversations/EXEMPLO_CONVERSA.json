@@ -1,0 +1,12 @@
+﻿{
+  "sessao_id": "sessao_001",
+  "timestamp_inicio": "2026-11-23T10:00:00Z",
+  "modelo_a": "qwen2.5:7b",
+  "modelo_b": "mistral:7b",
+  "topico": "Exemplo de topico do debate",
+  "turnos": [
+    {"turno": 1, "autor": "qwen", "conteudo": "..."},
+    {"turno": 1, "autor": "mistral", "conteudo": "..."}
+  ],
+  "consenso_atingido": false
+}
